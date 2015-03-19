@@ -1,0 +1,28 @@
+This Java program shows the difference in incrementing a number with a prefix (++number) and a postfix (number++).
+
+
+
+package Testing;
+
+public class IncrementDemo
+{
+	public static void main(String[] args) 
+	{
+		int myNumber, answer;
+		myNumber = 17;
+		
+		System.out.println("Before incrementing (++myNumber), my number " +
+				"is " + myNumber);
+		answer = ++myNumber;
+		System.out.println("After prefix increment, myNumber is " + 
+				myNumber);
+		System.out.println(" and answer is " + answer);
+		myNumber = 17;
+		System.out.println("Before incrementing (myNumber++), my number " +
+				"is " + myNumber);
+		answer = myNumber++;
+		System.out.println("After postfix increment, myNumber is " + 
+				myNumber);
+		System.out.println(" and answer is " + answer);
+	}
+}
