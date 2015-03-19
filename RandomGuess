@@ -1,0 +1,20 @@
+This Java program shows how to use the Math.random() element by asking the user to think of a number between 1 and 10.
+The program then displays a dialog message box with a random number between 1 and 10.
+
+
+
+
+package Testing;
+
+import javax.swing.JOptionPane;
+
+public class RandomGuess
+{
+	public static void main(String[] args)
+	{
+		JOptionPane.showMessageDialog(null, "Think of a number " +
+				" between 1 and 10.");
+		JOptionPane.showMessageDialog(null, "The number is " +
+				(1 + (int)(Math.random() * 10)));
+	}
+}
