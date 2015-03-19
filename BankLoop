@@ -1,0 +1,40 @@
+This Java program allows the user to input a starting amount for interest calculations. It will calculate the interest for the 
+balance given and ask you if you would like to see the interest after the next year. This continues until the user enters 'n'.
+
+
+
+package Testing;
+
+import java.util.Scanner;
+
+public class BankLoop 
+{
+	public static void main(String[] args)
+	{
+		double balance;
+		String response;
+		char responseChar;
+		int tempBalance;
+		int year = 1;
+		final double INT_RATE = 0.03;
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Enter initial bank balance : ");
+		balance = keyboard.nextDouble();
+		keyboard.nextLine();
+		do
+		{
+			balance = balance + balance * INT_RATE;
+			tempBalance = (int)(balance * 100);
+			balance = tempBalance / 100.0;
+			System.out.println("After year " + year + " at " + 
+					INT_RATE + " interest rate, balance is $" + 
+					balance);
+			year = year + 1;
+			System.out.print("Do you want to see the balance " +
+					"\nat the end of another year? Y or N? ");
+			response = keyboard.nextLine();
+			responseChar = response.charAt(0);
+		} while(responseChar == 'y');
+	}
+}
