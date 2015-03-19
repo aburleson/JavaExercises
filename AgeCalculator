@@ -1,0 +1,26 @@
+This Java program exercise creates an interaction between you and the program where it calculates how old you are 
+turning in the year you enter.
+
+
+package Testing;
+
+import java.util.*;
+import javax.swing.*;
+
+public class AgeCalculator 
+{	
+	public static void main(String[] args) 
+	{
+		GregorianCalendar now = new GregorianCalendar();
+		int nowYear;
+		int birthYear;
+		int yearsOld;
+		birthYear = Integer.parseInt(JOptionPane.showInputDialog
+				(null, "In what year were you born?"));
+		nowYear = now.get(GregorianCalendar.YEAR);
+		yearsOld = nowYear - birthYear;
+		JOptionPane.showMessageDialog(null, "This is the year you turn "
+				+ yearsOld + " years old.");
+	}
+
+}
