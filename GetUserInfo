@@ -1,0 +1,25 @@
+This Java program does a simple exercise where the user is asked to provide a name and an age. The program saves the input
+from the keyboard and displays it in a string sentence.
+
+
+
+package Testing;
+
+import java.util.Scanner;
+
+public class GetUserInfo
+{
+	public static void main(String[] args) 
+	{
+		String name;
+		int age;
+		Scanner inputDevice = new Scanner(System.in);
+		System.out.print("Please enter your name:");
+		name = inputDevice.nextLine();
+		System.out.print("Please enter your age:");
+		age = inputDevice.nextInt();
+		System.out.println("Your name is " + name + " and you are " 
+				+ age + " years old. : ) ");
+	}
+
+}
