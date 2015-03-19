@@ -1,0 +1,30 @@
+This Java program exercises the use of greater than or less than values. The user is prompted to enter a value no higher than 3.
+If the value entered is 3 or below, the user gets a message saying they entered the correct answer. If they enter a number
+higher than 3, the user will receive an error message and will be prompted to enter in a number no higher than 3 again.
+
+
+
+
+package Testing;
+
+import java.util.Scanner;
+
+public class EnterSmallValue 
+{
+	public static void main(String[] args) 
+	{
+		int userEntry;
+		final int LIMIT = 3;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Please enter an integer no higher than " + 
+				LIMIT + " : ");
+		userEntry = input.nextInt();
+		while(userEntry > LIMIT)
+		{
+			System.out.println("The number you entered was too high...");
+			System.out.print("Please enter an integer no higher than " +
+					LIMIT + " : ");
+		}
+		System.out.println("You correctly entered " + userEntry);
+	}
+}
