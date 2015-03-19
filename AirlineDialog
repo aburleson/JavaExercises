@@ -1,0 +1,22 @@
+This Java program displays a message window for the user to select an answer to a question.
+After selecting an answer, another box will appear confirming the answer choice.
+
+
+
+package Testing;
+
+import javax.swing.JOptionPane;
+
+public class AirlineDialog 
+{	
+	public static void main(String[] args)
+	{
+		int selection;
+		boolean isYes;
+		selection = JOptionPane.showConfirmDialog(null, 
+				"Do you want to upgrade to first class?");
+		isYes = (selection == JOptionPane.YES_OPTION);
+		JOptionPane.showMessageDialog(null, "You responded " + isYes);
+	}
+
+}
